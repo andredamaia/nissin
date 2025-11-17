@@ -64,7 +64,7 @@ export default function Header () {
       <div className="container-fluid">
         <div className="row">
           <div className="col-6 col-md-4 col-xl-4">
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>
                 {/* <img src="/logo.jpg" style={{ width: 180, mixBlendMode: 'multiply' }} alt="Nissin solutions" /> */}
 
@@ -124,15 +124,15 @@ export default function Header () {
               </div>
 
               <div className={styles.menuList}>
-                <Link href="/"><a>Home <div className={styles.line}></div></a></Link>
+                <Link legacyBehavior href="/"><a>Home <div className={styles.line}></div></a></Link>
 
-                <Link href="/produtos"><a>Produtos <div className={styles.line}></div></a></Link>
+                <Link legacyBehavior href="/produtos"><a>Produtos <div className={styles.line}></div></a></Link>
 
-                <Link href="/sobre"><a>Sobre <div className={styles.line}></div></a></Link>
+                <Link legacyBehavior href="/sobre"><a>Sobre <div className={styles.line}></div></a></Link>
 
-                <Link href="/parceiros"><a>Parceiros <div className={styles.line}></div></a></Link>
+                <Link legacyBehavior href="/parceiros"><a>Parceiros <div className={styles.line}></div></a></Link>
 
-                <Link href="/contato"><a>Contato <div className={styles.line}></div></a></Link>
+                <Link legacyBehavior href="/contato"><a>Contato <div className={styles.line}></div></a></Link>
               </div>
             </div>
           </div>
@@ -152,11 +152,11 @@ export default function Header () {
       </div>
 
       <div className={`${styles.mobileMenu} mobileMenu`}>
-        <Link href="/"><a>Home <div className={styles.line}></div></a></Link>
-        <Link href="/categorias"><a>Produtos <div className={styles.line}></div></a></Link>
-        <Link href="/sobre"><a>Sobre <div className={styles.line}></div></a></Link>
-        <Link href="/parceiros"><a>Parceiros <div className={styles.line}></div></a></Link>
-        <Link href="/contato"><a>Contato <div className={styles.line}></div></a></Link>
+        <Link legacyBehavior href="/"><a>Home <div className={styles.line}></div></a></Link>
+        <Link legacyBehavior href="/categorias"><a>Produtos <div className={styles.line}></div></a></Link>
+        <Link legacyBehavior href="/sobre"><a>Sobre <div className={styles.line}></div></a></Link>
+        <Link legacyBehavior href="/parceiros"><a>Parceiros <div className={styles.line}></div></a></Link>
+        <Link legacyBehavior href="/contato"><a>Contato <div className={styles.line}></div></a></Link>
       </div> 
     </header> 
   )

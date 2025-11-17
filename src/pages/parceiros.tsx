@@ -99,7 +99,7 @@ export default function Parceiros() {
                     </div>
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-12 col-xl-3">
                         <div className={styles.parceirosHolder}><img src="/hgt.png" alt="" /></div>
                     </div>
@@ -123,7 +123,7 @@ export default function Parceiros() {
                     <div className="col-12">
                         <div style={{ margin: '40px 0 60px', border: '1px solid #f1f1f1' }}></div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="row">
                     <div className="col-12 col-xl-3">
@@ -197,7 +197,7 @@ export default function Parceiros() {
                     </div>
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-12 col-xl-3">
                         <div className={styles.parceirosHolder}><img src="/american.png" alt="" /></div>
                     </div>
@@ -217,7 +217,7 @@ export default function Parceiros() {
                     <div className="col-12">
                         <div style={{ margin: '40px 0 60px', border: '1px solid #f1f1f1' }}></div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="row">
                     <div className="col-12 col-xl-3">
@@ -238,6 +238,51 @@ export default function Parceiros() {
                         <p>A empresa dedica especial atenção para o desenvolvimento dos clientes juntamente como o processo de negociação, transformando-a em destaque no mercado.</p>
 
                         <p>Saiba mais sobre a BT Fixo: <a target="_blank" href="http://www.btfixo.com.br">www.btfixo.com.br </a></p>
+                    </div>
+
+                    <div className="col-12">
+                        <div style={{ margin: '40px 0 60px', border: '1px solid #f1f1f1' }}></div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-12 col-xl-3">
+                        <div className={styles.parceirosHolder}><img src="/hepyc.png" alt="" /></div>
+                    </div>
+
+                    <div className="col-12 col-xl-8 offset-xl-1">
+                        <h4>Hepyc</h4>
+
+                        <p>Com mais de 75 anos de experiência, a Hepyc é referência internacional no desenvolvimento e fabricação de ferramentas de corte de alta precisão. Desde sua fundação, a empresa
+                        mantém um compromisso inabalável com a qualidade, a inovação e o desempenho, tornando-se uma das marcas mais respeitadas do setor metalmecânico.</p>
+
+                        <p>Pioneira na adoção de tecnologias de Indústria 4.0, a Hepyc combina investimentos contínuos em automação, engenharia e pesquisa de materiais com um rigoroso controle de qualidade em cada etapa do processo produtivo. O resultado é um portfólio completo de soluções para usinagem, reconhecido pela confiabilidade e pela performance em aplicações de alta exigência.</p>
+
+                        <p>Presente nos principais mercados globais, a Hepyc é sinônimo de evolução, tecnologia e precisão, valores que refletem seu compromisso em acompanhar as transformações da manufatura moderna e antecipar as demandas do futuro da produção industrial.</p>
+
+                        <p>Saiba mais sobre a Hepyc: <a target="_blank" href="https://www.hepyc.com/en/">www.hepyc.com</a></p>
+                    </div>
+
+                    <div className="col-12">
+                        <div style={{ margin: '40px 0 60px', border: '1px solid #f1f1f1' }}></div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-12 col-xl-3">
+                        <div className={styles.parceirosHolder}><img src="/amec.png" alt="" /></div>
+                    </div>
+
+                    <div className="col-12 col-xl-8 offset-xl-1">
+                        <h4>AMEC</h4>
+
+                        <p>A Allied Machine & Engineering é uma fabricante líder de sistemas de ferramentas de corte para furação e acabamento de furos. A Allied dedica suas avançadas capacidades de engenharia e manufatura à criação da mais ampla seleção de ferramentas com valor agregado disponível para as indústrias de corte de metais em todo o mundo.</p>
+
+                        <p>Nossas soluções em ferramentas oferecem o menor custo por furo em uma ampla variedade de aplicações de furação, alargamento, brunimento, roscamento e mandrilamento.</p>
+
+                        <p>Localizada em Dover, Ohio, as tecnologias de furação de precisão da Allied fornecem aos usuários finais em todo o mundo o mais alto nível de desempenho. A engenharia de precisão e o suporte técnico especializado fazem da Allied a primeira e melhor escolha para resolver desafios complexos no corte de metais.</p>
+
+                        <p>Saiba mais sobre a AMEC: <a target="_blank" href="https://alliedmachine.com/">www.alliedmachine.com/</a></p>
                     </div>
 
                     <div className="col-12">

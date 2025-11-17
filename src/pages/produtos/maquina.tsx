@@ -73,25 +73,25 @@ export default function Produtos({ data }: any) {
 
                         <div className="col-12">
                             <div className={styles.pageIndication}>
-                                <Link href="/">
+                                <Link legacyBehavior href="/">
                                     <a>Home</a>
                                 </Link>
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
                                 <span>/</span>
 
-                                <Link href="/produtos/rosqueamento">
+                                <Link legacyBehavior href="/produtos/rosqueamento">
                                     <a>Rosqueamento</a>
                                 </Link>
 
                                 <span>/</span>
 
-                                <Link href="/produtos/machos">
+                                <Link legacyBehavior href="/produtos/machos">
                                     <a>Machos</a>
                                 </Link>
 
@@ -178,7 +178,7 @@ export default function Produtos({ data }: any) {
                                         <ul><li style={{ border: 'none' }}>3.a - Canal Helicoidal</li></ul>
                                     </div>
 
-                                    <div className={styles.products} style={{ display: 'block' }}>
+                                    <div className={`${styles.products} ${styles.productsColumn}`}>
                                         {canalHelicoidal.map(tool =>(
                                             <div className={styles.productsBox} key={tool.id}>
                                                 <div className={styles.productsImg}>
@@ -213,7 +213,7 @@ export default function Produtos({ data }: any) {
                                         <ul><li style={{ border: 'none' }}>3.b - Canal Reto</li></ul>
                                     </div>
 
-                                    <div className={styles.products} style={{ display: 'block' }}>
+                                    <div className={`${styles.products} ${styles.productsColumn}`}>
                                         {canalReto.map(tool =>(
                                             <div className={styles.productsBox} key={tool.id}>
                                                 <div className={styles.productsImg}>
@@ -248,7 +248,7 @@ export default function Produtos({ data }: any) {
                                         <ul><li style={{ border: 'none' }}>3.b - Canal Reto</li></ul>
                                     </div>
 
-                                    <div className={styles.products} style={{ display: 'block' }}>
+                                    <div className={`${styles.products} ${styles.productsColumn}`}>
                                         {pontaHelicoidal.map(tool =>(
                                             <div className={styles.productsBox} key={tool.id}>
                                                 <div className={styles.productsImg}>
@@ -367,7 +367,6 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             data
-        },
-        revalidate: 60 * 60 * 8,
+        }
     }
 }

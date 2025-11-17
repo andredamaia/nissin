@@ -15,7 +15,7 @@ import styles from '../../styles/pages/produtos.module.scss'
 export default function Produtos({ data }: any) {
     const tools = [...data];
 
-    const suportesEInsertos = tools.filter((tool: any) => tool.categories.includes(16))
+    const brocasEspada = tools.filter((tool: any) => tool.categories.includes(46))
 
     useEffect(() => {
         gsap.to('.animate', {
@@ -85,13 +85,13 @@ export default function Produtos({ data }: any) {
 
                                 <span>/</span>
 
-                                <a href="#">Suportes e Insertos</a>
+                                <a href="#">Brocas Espada</a>
                             </div>
                         </div>
 
                         <div className="col-12">
                             <div className={styles.products}>
-                                {suportesEInsertos.map(tool =>(
+                                {brocasEspada.map(tool =>(
                                     <div className={styles.productsBox} key={tool.id}>
                                         <div className={styles.productsImg}>
                                             <img 
@@ -131,7 +131,7 @@ export default function Produtos({ data }: any) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const { data } = await api.get('tools?per_page=100&_embed&categories=16&orderby=title&order=asc',  {
+    const { data } = await api.get('tools?per_page=100&_embed&categories=46&orderby=title&order=asc',  {
         params: {
             _limit: 12,
             _order: 'desc'

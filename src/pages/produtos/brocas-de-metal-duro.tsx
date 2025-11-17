@@ -67,19 +67,19 @@ export default function Produtos({ data }: any) {
 
                         <div className="col-12">
                             <div className={styles.pageIndication}>
-                                <Link href="/">
+                                <Link legacyBehavior href="/">
                                     <a>Home</a>
                                 </Link>
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
                                 <span>/</span>
 
-                                <Link href="/produtos/furacao">
+                                <Link legacyBehavior href="/produtos/furacao">
                                     <a>Furação</a>
                                 </Link>
 
@@ -141,7 +141,6 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             data
-        },
-        revalidate: 60 * 60 * 8,
+        }
     }
 }

@@ -64,7 +64,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
@@ -74,7 +74,7 @@ export default function Categoria() {
                             </div>
 
                             <div className={styles.boxTools}>
-                                <Link href="/produtos/machos">
+                                <Link legacyBehavior href="/produtos/machos">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/07/VP-CANAL-RETO.jpg" alt="" />
@@ -86,7 +86,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/rosqueadeira">
+                                <Link legacyBehavior href="/produtos/rosqueadeira">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/10/roqueadeira.jpg" alt="" />

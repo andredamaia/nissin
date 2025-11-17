@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect } from 'react';
 import gsap from 'gsap'
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import Header from '../components/header';
 import Information from '../components/information';
@@ -11,7 +11,7 @@ import Footer from '../components/footer';
 
 import styles from '../styles/pages/categorias.module.scss';
 
-SwiperCore.use([Navigation, Autoplay]);
+const swiperModules = [Navigation, Autoplay];
 
 export default function Categoria() {
     useEffect(() => {
@@ -67,7 +67,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>
                                         <strong>Cutting Tools</strong>
                                     </a>
@@ -75,7 +75,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/management">
+                                <Link legacyBehavior href="/management">
                                     <a>
                                         Management
                                     </a>
@@ -83,7 +83,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/tecnology">
+                                <Link legacyBehavior href="/tecnology">
                                     <a style={{ color: '#b0b0b0' }}>
                                         Tecnology
                                     </a>
@@ -91,7 +91,7 @@ export default function Categoria() {
                             </div>
 
                             <div className={styles.boxTools}>
-                                <Link href="/produtos/fresamento">
+                                <Link legacyBehavior href="/produtos/fresamento">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/fresamento-thumb.jpg" alt="" />
@@ -103,7 +103,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/torneamento">
+                                <Link legacyBehavior href="/produtos/torneamento">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/torneamento-thumb.jpg" alt="" />
@@ -115,7 +115,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/furacao">
+                                <Link legacyBehavior href="/produtos/furacao">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/furacao-thumb.jpg" alt="" />
@@ -127,7 +127,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/rosqueamento">
+                                <Link legacyBehavior href="/produtos/rosqueamento">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/rosqueamento-thumb.jpg" alt="" />
@@ -139,7 +139,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/fixacao">
+                                <Link legacyBehavior href="/produtos/fixacao">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/fixacao-thumb.jpg" alt="" />
@@ -161,10 +161,11 @@ export default function Categoria() {
                     <div className="row">
                         <div className="col-12">
                             <div className={styles.swiperParceiros}>
-                                <Swiper
+                            <Swiper
+                              modules={swiperModules}
                                     spaceBetween={50}
                                     slidesPerView={4}
-                                    autoplay
+                              autoplay
                                     loop={true}
                                     onSlideChange={() => console.log('slide change')}
                                     onSwiper={(swiper) => console.log(swiper)}

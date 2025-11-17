@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import Header from '../components/header';
 import Information from '../components/information';
@@ -10,7 +10,7 @@ import Footer from '../components/footer';
 
 import styles from '../styles/pages/index.module.scss';
 
-SwiperCore.use([Navigation, Autoplay]);
+const swiperModules = [Navigation, Autoplay];
 
 export default function Home() {
   const router = useRouter()
@@ -39,7 +39,7 @@ export default function Home() {
               <div className={styles.titleBanner}>
                 <h1><span>especialista</span> <br/>em ferramentas <br/>de usinagem</h1>
 
-                <Link href="/produtos">
+                <Link legacyBehavior href="/produtos">
                   <a className="transition-line" data-hover-color="mantis">
                     Conheça nossos produtos <img src="/arrow-right.png" alt="" />
                   </a>
@@ -68,7 +68,7 @@ export default function Home() {
                       <p>A busca incessante por melhorias de processos, é a locomotiva que move nossa missão de fornecer soluções com inovação tecnológica, implantado melhorias contínuas em processos industriais, aplicando ferramentas de excelente custo-benefício...</p>
                   </div>
 
-                  <Link href="/cutting-tools">
+                  <Link legacyBehavior href="/cutting-tools">
                     <a className="buttonPrimary">
                       Ver Produtos
                     </a>
@@ -86,7 +86,7 @@ export default function Home() {
                     <p>Acreditamos que as necessidades de nossos clientes, não se resume apenas em aquisição de produtos, suas demandas por inovações e melhorias contínuas a fim de reduzirem seus custos aumentando sua competitividade é essencial num mercado altamente competitivo...</p>
                   </div>
 
-                  <Link href="/management">
+                  <Link legacyBehavior href="/management">
                     <a className="buttonPrimary">
                       Ver mais
                     </a>
@@ -104,7 +104,7 @@ export default function Home() {
                     <p>Você está satisfeito com a eficiência de suas máquinas? Nós podemos melhorar a eficiência delas, com nosso sistema de Preseting Laser, suas ferramentas podem ser presetadas de forma muito rápida, automática e segura...</p>
                   </div>
 
-                  <Link href="/tecnology">
+                  <Link legacyBehavior href="/tecnology">
                     <a className="buttonPrimary">
                       Ver mais
                     </a>
@@ -121,8 +121,8 @@ export default function Home() {
           <div className="row">
             <div className="col-12">
               <div className="row">
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/produtos/fresamento">
+                <div className="col-12 col-md-4 col-xl-4">
+                  <Link legacyBehavior href="/produtos/fresamento">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -137,8 +137,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/produtos/torneamento">
+                <div className="col-12 col-md-4 col-xl-4">
+                  <Link legacyBehavior href="/produtos/torneamento">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -153,8 +153,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/produtos/furacao">
+                <div className="col-12 col-md-4 col-xl-4">
+                  <Link legacyBehavior href="/produtos/furacao">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -169,8 +169,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/produtos/rosqueamento">
+                <div className="col-12 col-md-4 col-xl-4">
+                  <Link legacyBehavior href="/produtos/rosqueamento">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -185,8 +185,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/produtos/fixacao">
+                <div className="col-12 col-md-4 col-xl-4">
+                  <Link legacyBehavior href="/produtos/fixacao">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -201,7 +201,7 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="col-4 col-md-3 col-xl-3">
+                {/* <div className="col-4 col-md-3 col-xl-3">
                   <div className={styles.boxManagement}>
                     <div className={styles.imgCircle}>
                       <img src="./zero-point.jpg" alt="" />
@@ -211,10 +211,10 @@ export default function Home() {
                       <span>Zero Point</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/management">
+                <div className="col-12 col-md-4 col-xl-4">
+                  <Link legacyBehavior href="/management">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -229,8 +229,8 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div className="col-4 col-md-3 col-xl-3">
-                  <Link href="/tecnology">
+                {/* <div className="col-4 col-md-3 col-xl-3">
+                  <Link legacyBehavior href="/tecnology">
                     <a>
                       <div className={styles.boxManagement}>
                         <div className={styles.imgCircle}>
@@ -243,7 +243,7 @@ export default function Home() {
                       </div>
                     </a>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -280,6 +280,7 @@ export default function Home() {
 
               <div className={styles.swiperParceiros}>
                 <Swiper
+                  modules={swiperModules}
                   spaceBetween={50}
                   slidesPerView={4}
                   autoplay
@@ -291,12 +292,14 @@ export default function Home() {
                 >
                   <SwiperSlide><div className={styles.parceirosHolder}><img src="/ceratizit.png" alt="" /></div></SwiperSlide>
                   <SwiperSlide><div className={styles.parceirosHolder}><img src="/osg.png" alt="" /></div></SwiperSlide>
-                  <SwiperSlide><div className={styles.parceirosHolder}><img src="/hgt.png" alt="" /></div></SwiperSlide>
+                  {/* <SwiperSlide><div className={styles.parceirosHolder}><img src="/hgt.png" alt="" /></div></SwiperSlide> */}
                   <SwiperSlide><div className={styles.parceirosHolder}><img src="/startool.png" alt="" /></div></SwiperSlide>
                   <SwiperSlide><div className={styles.parceirosHolder}><img src="/hev.png" alt="" /></div></SwiperSlide>
                   <SwiperSlide><div className={styles.parceirosHolder}><img src="/spinwiser.png" alt="" /></div></SwiperSlide>
-                  <SwiperSlide><div className={styles.parceirosHolder}><img src="/american.png" alt="" /></div></SwiperSlide>
+                  {/* <SwiperSlide><div className={styles.parceirosHolder}><img src="/american.png" alt="" /></div></SwiperSlide> */}
                   <SwiperSlide><div className={styles.parceirosHolder}><img src="/bt-fixo.jpg" alt="" /></div></SwiperSlide>
+                  <SwiperSlide><div className={styles.parceirosHolder}><img src="/hepyc.png" alt="" /></div></SwiperSlide>
+                  <SwiperSlide><div className={styles.parceirosHolder}><img src="/amec.png" alt="" /></div></SwiperSlide>
                 </Swiper>
               </div>
             </div>
@@ -317,7 +320,7 @@ export default function Home() {
               <p>Nossa estratégia de negócio vai muito além de fornecer produtos, estamos focados na entrega de serviços com inovações tecnológicas, estabelecendo uma relação sólida e confiável com nossos clientes, parceiros e colaboradores.</p>
 
               <div>
-                <Link href="/sobre">
+                <Link legacyBehavior href="/sobre">
                   <a className="buttonPrimary">
                     Conheça Mais
                   </a>

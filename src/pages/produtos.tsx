@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router'
@@ -15,7 +15,7 @@ import Footer from '../components/footer';
 
 import styles from '../styles/pages/produtos.module.scss';
 
-SwiperCore.use([Navigation, Autoplay]);
+const swiperModules = [Navigation, Autoplay];
 
 export default function Produtos({ data }: any) {
     const router = useRouter()
@@ -75,7 +75,7 @@ export default function Produtos({ data }: any) {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                        <Link legacyBehavior href="/cutting-tools">
                                     <a>
                                         Cutting Tools
                                     </a>
@@ -83,7 +83,7 @@ export default function Produtos({ data }: any) {
 
                                 <span>/</span>
 
-                                <Link href="/management">
+                        <Link legacyBehavior href="/management">
                                     <a>
                                         Management
                                     </a>
@@ -91,7 +91,7 @@ export default function Produtos({ data }: any) {
 
                                 <span>/</span>
 
-                                <Link href="/tecnology">
+                        <Link legacyBehavior href="/tecnology">
                                     <a>
                                         Tecnology
                                     </a>
@@ -107,10 +107,11 @@ export default function Produtos({ data }: any) {
                     <div className="row">
                         <div className="col-12">
                             <div className={styles.swiperParceiros}>
-                                <Swiper
+                <Swiper
+                  modules={swiperModules}
                                     spaceBetween={50}
                                     slidesPerView={4}
-                                    autoplay
+                  autoplay
                                     loop={true}
                                     onSlideChange={() => console.log('slide change')}
                                     onSwiper={(swiper) => console.log(swiper)}
@@ -137,8 +138,8 @@ export default function Produtos({ data }: any) {
                     <div className="row">
                         <div className="col-12">
                             <div className="row">
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/produtos/fresamento">
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/produtos/fresamento">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -153,8 +154,8 @@ export default function Produtos({ data }: any) {
                                     </Link>
                                 </div>
 
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/produtos/torneamento">
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/produtos/torneamento">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -169,8 +170,8 @@ export default function Produtos({ data }: any) {
                                     </Link>
                                 </div>
 
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/produtos/furacao">
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/produtos/furacao">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -185,8 +186,8 @@ export default function Produtos({ data }: any) {
                                     </Link>
                                 </div>
 
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/produtos/rosqueamento">
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/produtos/rosqueamento">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -201,8 +202,8 @@ export default function Produtos({ data }: any) {
                                     </Link>
                                 </div>
 
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/produtos/fixacao">
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/produtos/fixacao">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -217,7 +218,7 @@ export default function Produtos({ data }: any) {
                                     </Link>
                                 </div>
 
-                                <div className="col-4 col-md-3 col-xl-3">
+                                {/* <div className="col-12 col-md-4 col-xl-4">
                                     <div className={styles.boxManagement}>
                                         <div className={styles.imgCircle}>
                                         <img src="./zero-point.jpg" alt="" />
@@ -227,10 +228,10 @@ export default function Produtos({ data }: any) {
                                         <span>Zero Point</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/management">
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/management">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -245,8 +246,8 @@ export default function Produtos({ data }: any) {
                                     </Link>
                                 </div>
 
-                                <div className="col-4 col-md-3 col-xl-3">
-                                    <Link href="/tecnology">
+                                {/* <div className="col-12 col-md-4 col-xl-4">
+                                    <Link legacyBehavior href="/tecnology">
                                         <a>
                                         <div className={styles.boxManagement}>
                                             <div className={styles.imgCircle}>
@@ -259,7 +260,7 @@ export default function Produtos({ data }: any) {
                                         </div>
                                         </a>
                                     </Link>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -306,7 +307,6 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             data
-        },
-        revalidate: 60 * 60* 8,
+        }
     }
 }

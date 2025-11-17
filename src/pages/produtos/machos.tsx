@@ -64,13 +64,13 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
                                 <span>/</span>
 
-                                <Link href="/produtos/rosqueamento">
+                                <Link legacyBehavior href="/produtos/rosqueamento">
                                     <a>Rosqueamento</a>
                                 </Link>
 
@@ -80,7 +80,7 @@ export default function Categoria() {
                             </div>
 
                             <div className={styles.boxTools}>
-                                <Link href="/produtos/maquina">
+                                <Link legacyBehavior href="/produtos/maquina">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/07/LINHA-SIGMA.jpg" alt="" />
@@ -92,7 +92,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/manual">
+                                <Link legacyBehavior href="/produtos/manual">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/07/MACHOS-MANUAIS.jpg" alt="" />
@@ -104,7 +104,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/aplicacao">
+                                <Link legacyBehavior href="/produtos/aplicacao">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/07/cartilha_de_machos_osg_vol_3.jpg" alt="" />

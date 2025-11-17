@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect } from 'react';
 import gsap from 'gsap'
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import Header from '../components/header';
 import Information from '../components/information';
@@ -11,7 +11,7 @@ import Footer from '../components/footer';
 
 import styles from '../styles/pages/categorias.module.scss';
 
-SwiperCore.use([Navigation, Autoplay]);
+const swiperModules = [Navigation, Autoplay];
 
 export default function Management() {
     useEffect(() => {
@@ -67,7 +67,7 @@ export default function Management() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>
                                         Cutting Tools
                                     </a>
@@ -75,7 +75,7 @@ export default function Management() {
 
                                 <span>/</span>
 
-                                <Link href="/management">
+                                <Link legacyBehavior href="/management">
                                     <a>
                                         Management
                                     </a>
@@ -83,7 +83,7 @@ export default function Management() {
 
                                 <span>/</span>
 
-                                <Link href="/tecnology">
+                                <Link legacyBehavior href="/tecnology">
                                     <a style={{ color: '#b0b0b0' }}>
                                         <strong>Tecnology</strong>
                                     </a>
@@ -157,10 +157,11 @@ export default function Management() {
                     <div className="row">
                         <div className="col-12">
                             <div className={styles.swiperParceiros}>
-                                <Swiper
+                            <Swiper
+                              modules={swiperModules}
                                     spaceBetween={50}
                                     slidesPerView={4}
-                                    autoplay
+                              autoplay
                                     loop={true}
                                     onSlideChange={() => console.log('slide change')}
                                     onSwiper={(swiper) => console.log(swiper)}

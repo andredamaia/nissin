@@ -163,7 +163,7 @@
     }
 
     .products {
-        display: grid;
+        display: grid !important;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 60px;
         padding: 0 0 10rem;
@@ -260,6 +260,13 @@
                 }
             }
         }
+    }
+
+    .productsColumn {
+        display: flex !important;
+        flex-direction: column;
+        gap: 60px;
+        padding: 0 0 10rem;
     }
 }
 

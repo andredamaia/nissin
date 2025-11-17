@@ -64,7 +64,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
@@ -75,7 +75,7 @@ export default function Categoria() {
                             </div>
 
                             <div className={styles.boxTools}>
-                                <Link href="/produtos/brocas-de-metal-duro">
+                                <Link legacyBehavior href="/produtos/brocas-de-metal-duro">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/06/3XD.jpg" alt="" />
@@ -87,7 +87,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/suportes-e-insertos-furacao">
+                                <Link legacyBehavior href="/produtos/suportes-e-insertos-furacao">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/suportes-e-insertos.jpg" alt="" />
@@ -95,6 +95,66 @@ export default function Categoria() {
 
                                         <div className={styles.toolsName}>
                                             Suportes e Insertos
+                                        </div>
+                                    </a>
+                                </Link>
+
+                                <Link legacyBehavior href="/produtos/brocas-de-hss">
+                                    <a>
+                                        <div className={styles.toolsImg}>
+                                            <img src="/brocas-de-hss.jpg" alt="" />
+                                        </div>
+
+                                        <div className={styles.toolsName}>
+                                            Brocas de HSS
+                                        </div>
+                                    </a>
+                                </Link>
+
+                                <Link legacyBehavior href="/produtos/jogo-de-brocas">
+                                    <a>
+                                        <div className={styles.toolsImg}>
+                                            <img src="/jogo-de-brocas.jpg" alt="" />
+                                        </div>
+
+                                        <div className={styles.toolsName}>
+                                            Jogo de Brocas
+                                        </div>
+                                    </a>
+                                </Link>
+
+                                <Link legacyBehavior href="/produtos/alargadores">
+                                    <a>
+                                        <div className={styles.toolsImg}>
+                                            <img src="/alargadores.jpg" alt="" />
+                                        </div>
+
+                                        <div className={styles.toolsName}>
+                                            Alargadores
+                                        </div>
+                                    </a>
+                                </Link>
+
+                                <Link legacyBehavior href="/produtos/escariadores">
+                                    <a>
+                                        <div className={styles.toolsImg}>
+                                            <img src="/escariadores.jpg" alt="" />
+                                        </div>
+
+                                        <div className={styles.toolsName}>
+                                            Escariadores
+                                        </div>
+                                    </a>
+                                </Link>
+
+                                <Link legacyBehavior href="/produtos/brocas-espada">
+                                    <a>
+                                        <div className={styles.toolsImg}>
+                                            <img src="/brocas-espada.jpg" alt="" />
+                                        </div>
+
+                                        <div className={styles.toolsName}>
+                                            Brocas Espada
                                         </div>
                                     </a>
                                 </Link>

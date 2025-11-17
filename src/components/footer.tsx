@@ -3,6 +3,8 @@ import Link from 'next/link'
 import styles from '../styles/components/footer.module.scss'
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <>
             <div className={styles.footer}>
@@ -35,15 +37,15 @@ export default function Footer() {
                             <div className={styles.footerProducts}>
                                 <span className={styles.footerSubtitle}>Categorias</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a className="transition-line" data-hover-color="dove-gray">Cutting Tools</a>
                                 </Link>
 
-                                <Link href="/management">
+                                <Link legacyBehavior href="/management">
                                     <a className="transition-line" data-hover-color="dove-gray">Management</a>
                                 </Link>
 
-                                <Link href="/tecnology">
+                                <Link legacyBehavior href="/tecnology">
                                     <a className="transition-line" data-hover-color="dove-gray">Tecnology</a>
                                 </Link>
                             </div>
@@ -55,17 +57,17 @@ export default function Footer() {
 
                                 <div className="row">
                                     <div className="col-12 col-md-6">
-                                        <Link href="/produtos/fresamento"><a>Fresamento</a></Link>
-                                        <Link href="/produtos/torneamento"><a>Torneamento</a></Link>
-                                        <Link href="/produtos/furacao"><a>Furação</a></Link>
-                                        <Link href="/produtos/rosqueamento"><a>Rosqueamento</a></Link>
+                                        <Link legacyBehavior href="/produtos/fresamento"><a>Fresamento</a></Link>
+                                        <Link legacyBehavior href="/produtos/torneamento"><a>Torneamento</a></Link>
+                                        <Link legacyBehavior href="/produtos/furacao"><a>Furação</a></Link>
+                                        <Link legacyBehavior href="/produtos/rosqueamento"><a>Rosqueamento</a></Link>
                                     </div>
 
                                     <div className="col-12 col-md-6">
-                                        <Link href="/produtos/fixacao"><a>Fixação</a></Link>
-                                        <Link href="#"><a>Zero Point</a></Link>
-                                        <Link href="/management"><a>Gerenciamento</a></Link>
-                                        <Link href="/tecnology"><a>Preset</a></Link>
+                                        <Link legacyBehavior href="/produtos/fixacao"><a>Fixação</a></Link>
+                                        {/* <Link legacyBehavior href="#"><a>Zero Point</a></Link> */}
+                                        <Link legacyBehavior href="/management"><a>Gerenciamento</a></Link>
+                                        {/* <Link legacyBehavior href="/tecnology"><a>Preset</a></Link> */}
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +77,7 @@ export default function Footer() {
                             <div className={styles.copyright}>
                                 <h2></h2>
 
-                                <p>Copyright © 2021 - Nissin Solutions - Todos os direitos reservados</p>
+                                <p>Copyright © {currentYear} - Nissin Solutions - Todos os direitos reservados</p>
                             </div>
                         </div>
                     </div>

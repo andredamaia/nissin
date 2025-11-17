@@ -1,10 +1,19 @@
-const withPlugins = require('next-compose-plugins')
-const withImages = require('next-images')
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  output: 'export',
   images: {
-    domains: ['http://nissinsolutions.com.br']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'nissinsolutions.com.br'
+      },
+      {
+        protocol: 'http',
+        hostname: 'nissinsolutions.com.br'
+      }
+    ]
   }
 }
 
-module.exports = withPlugins([[withImages]], nextConfig)
+module.exports = nextConfig

@@ -110,12 +110,25 @@
         }
     } 
 
+    .parceirosHolder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 90%;
+        }
+    }
+
     .swiperParceiros {
         .parceirosHolder {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 80px;
+            width: 100%;
 
             img { max-width: 90%;}
         }

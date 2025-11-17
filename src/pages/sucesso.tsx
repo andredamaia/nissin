@@ -11,7 +11,7 @@ export default function sucesso() {
             </Head>
 
             <div className={styles.pageSucess}>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                 <a>
                     {/* <img src="/logo.jpg" style={{ width: 180, mixBlendMode: 'multiply' }} alt="Nissin solutions" /> */}
 
@@ -51,7 +51,7 @@ export default function sucesso() {
                 <div className={styles.sucessMessage}>
                     <p>Obrigado, mensagem enviada com sucesso</p>
 
-                    <Link href="/"> 
+                    <Link legacyBehavior href="/"> 
                         <a>
                             Voltar para o site
                         </a>

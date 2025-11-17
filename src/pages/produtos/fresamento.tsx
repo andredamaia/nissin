@@ -64,7 +64,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
@@ -75,7 +75,7 @@ export default function Categoria() {
                             </div>
 
                             <div className={styles.boxTools}>
-                                <Link href="/produtos/suportes-e-insertos">
+                                <Link legacyBehavior href="/produtos/suportes-e-insertos">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/fresamento-img.png" alt="" />
@@ -87,7 +87,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/fresas-md-inteiricas">
+                                <Link legacyBehavior href="/produtos/fresas-md-inteiricas">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/09/blue.jpg" alt="" />
@@ -99,7 +99,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/fresas-md-roscada">
+                                {/* <Link legacyBehavior href="/produtos/fresas-md-roscada">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/09/yellow.jpg" alt="" />
@@ -107,6 +107,18 @@ export default function Categoria() {
 
                                         <div className={styles.toolsName}>
                                             Fresas MD Roscada
+                                        </div>
+                                    </a>
+                                </Link> */}
+
+                                <Link legacyBehavior href="/produtos/fresas-insertadas">
+                                    <a>
+                                        <div className={styles.toolsImg}>
+                                            <img src="/fresas-insertadas.jpg" alt="" />
+                                        </div>
+
+                                        <div className={styles.toolsName}>
+                                            Fresas Insertadas
                                         </div>
                                     </a>
                                 </Link>

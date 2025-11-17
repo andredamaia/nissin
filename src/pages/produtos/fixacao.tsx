@@ -64,7 +64,7 @@ export default function Categoria() {
 
                                 <span>/</span>
 
-                                <Link href="/cutting-tools">
+                                <Link legacyBehavior href="/cutting-tools">
                                     <a>Cutting Tools</a>
                                 </Link>
 
@@ -75,7 +75,7 @@ export default function Categoria() {
                             </div>
 
                             <div className={styles.boxTools}>
-                                <Link href="/produtos/cones-de-fixacao">
+                                <Link legacyBehavior href="/produtos/cones-de-fixacao">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/07/BT-PRECISAO.jpg" alt="" />
@@ -87,7 +87,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/acessorios-de-fixacao">
+                                <Link legacyBehavior href="/produtos/acessorios-de-fixacao">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="/chaves-img.png" width="120" alt="" />
@@ -99,7 +99,7 @@ export default function Categoria() {
                                     </a>
                                 </Link>
 
-                                <Link href="/produtos/fixacao-de-pecas">
+                                <Link legacyBehavior href="/produtos/fixacao-de-pecas">
                                     <a>
                                         <div className={styles.toolsImg}>
                                             <img src="http://nissinsolutions.com.br/api/wp-content/uploads/2021/07/MORSAS-ZERO-POINT-E-MESA-MAGNETICA.jpg" alt="" />

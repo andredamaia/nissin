@@ -63,7 +63,7 @@ export default function Suporte() {
                             <h4>Cutting Tools</h4>
                         </div>
 
-                        <Link href="/categorias">
+                        <Link legacyBehavior href="/categorias">
                             <a className="buttonPrimary">
                                 Ver Produtos
                             </a>
