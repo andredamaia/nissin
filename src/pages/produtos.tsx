@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router'
@@ -10,9 +12,10 @@ import { api } from '../services/api'
 import Header from '../components/header';
 import Information from '../components/information';
 import Footer from '../components/footer';
-import ParceirosSwiper from '../components/parceiros-swiper';
 
 import styles from '../styles/pages/produtos.module.scss';
+
+const swiperModules = [Navigation, Autoplay];
 
 export default function Produtos({ data }: any) {
     const router = useRouter()
@@ -103,7 +106,30 @@ export default function Produtos({ data }: any) {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <ParceirosSwiper />
+                            <div className={styles.swiperParceiros}>
+                                <Swiper
+                                  modules={swiperModules}
+                                  spaceBetween={50}
+                                  slidesPerView={4}
+                                  autoplay
+                                  loop={true}
+                                  onSlideChange={() => console.log('slide change')}
+                                  onSwiper={(swiper) => console.log(swiper)}
+                                  navigation
+                                  className={styles.parceirosSlider}
+                                >
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/ceratizit.png" alt="" /></div></SwiperSlide>
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/osg.png" alt="" /></div></SwiperSlide>
+                                    {/* <SwiperSlide><div className={styles.parceirosHolder}><img src="/hgt.png" alt="" /></div></SwiperSlide> */}
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/startool.png" alt="" /></div></SwiperSlide>
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/hev.png" alt="" /></div></SwiperSlide>
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/spinwiser.png" alt="" /></div></SwiperSlide>
+                                    {/* <SwiperSlide><div className={styles.parceirosHolder}><img src="/american.png" alt="" /></div></SwiperSlide> */}
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/bt-fixo.jpg" alt="" /></div></SwiperSlide>
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/hepyc.png" alt="" /></div></SwiperSlide>
+                                    <SwiperSlide><div className={styles.parceirosHolder}><img src="/amec.png" alt="" /></div></SwiperSlide>
+                                </Swiper>
+                            </div>
                         </div>
                     </div>
                 </div>
