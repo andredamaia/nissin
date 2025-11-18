@@ -29,11 +29,12 @@ export default function Home() {
       <Header />
 
       <div className={styles.bannerContent}>
+        <div className={styles.bannerOverlay}></div>
         <video autoPlay muted loop webkit-playsinline="true" className={styles.video}>
           <source src="/banner-2.mp4" type="video/mp4" />
         </video>
 
-        <div className="container" style={{ position: 'relative', zIndex: 12 }}>
+        <div className="container" style={{ position: 'relative', zIndex: 20 }}>
           <div className="row">
             <div className="col-12">
               <div className={styles.titleBanner}>
